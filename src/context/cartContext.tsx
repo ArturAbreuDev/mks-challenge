@@ -4,6 +4,7 @@ import React, {
   createContext,
   useContext,
   useState,
+  useEffect,
   ReactNode,
   Dispatch,
   SetStateAction,
@@ -33,8 +34,20 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [cart, setCart] = useState<Product[]>([])
+  const [cart, setCart] = useState<Product[]>(() => {
+    if (typeof window !== 'undefined') {
+      const savedCart = sessionStorage.getItem('cart')
+      return savedCart ? JSON.parse(savedCart) : []
+    }
+    return []
+  })
   const [modalCart, setModalCart] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('cart', JSON.stringify(cart))
+    }
+  }, [cart])
 
   const addProduct = (product: Product) => {
     const existingProductIndex = cart.findIndex((p) => p.id === product.id)
