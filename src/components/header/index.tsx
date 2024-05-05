@@ -22,7 +22,7 @@ export function Header() {
         <h1>MKS</h1>
         <span>sistemas</span>
       </LogoWrapper>
-      <Box onClick={openModal}>
+      <Box data-testid="open-modal-button" onClick={openModal}>
         <MarketIcon />
         <AnimatePresence>
           <motion.span
