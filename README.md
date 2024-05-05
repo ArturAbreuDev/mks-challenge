@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        .list-item {
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
+
 <body>
     <div class="container">
         <h1>Desafio de Frontend MKS</h1>
