@@ -23,17 +23,17 @@ export function Header() {
         <span>sistemas</span>
       </LogoWrapper>
       <Box data-testid="open-modal-button" onClick={openModal}>
-        <MarketIcon />
         <AnimatePresence>
-          <motion.span
+          <motion.div
             key={totalItems}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
+            initial={{ rotate: 0 }}
+            animate={{ rotate: [0, 10, -10, 10, -10, 0] }}
+            transition={{ duration: 0.4, repeat: 0 }}
           >
-            {totalItems}
-          </motion.span>
+            <MarketIcon />
+          </motion.div>
         </AnimatePresence>
+        <span>{totalItems}</span>
       </Box>
     </Container>
   )
