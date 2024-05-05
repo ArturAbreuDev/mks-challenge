@@ -20,7 +20,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 Node.js
 npm ou yarn
 Instalação
-Clone o repositório:git clone https://github.com/seu-usuario/mks-frontend-challenge.git
+Clone o repositório:git clone [https://github.com/seu-usuario/mks-frontend-challenge.git](https://github.com/ArturAbreuDev/mks-challenge.git)
 Instale as dependências:cd mks-frontend-challenge
 npm install # ou yarn install
 Execução
