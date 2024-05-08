@@ -61,7 +61,10 @@ export const ProductName = styled.h2`
 
 export const ProductPrice = styled.div`
   width: auto;
-  height: 28px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   background-color: #373737;
   font-size: 15px;
